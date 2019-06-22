@@ -1,0 +1,62 @@
+/* pages/record/record.wxss */
+.container{
+  padding: 2rpx;
+}
+.textarea-container{
+  width: 100%;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.utils{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 76rpx;
+  bottom: 0;
+  padding: 3rpx 10rpx;
+}
+.photo{
+  display: flex;
+  width: 90rpx;
+  height: 70rpx;
+}
+.send{
+  box-sizing: border-box;
+  width: 110rpx;
+  height: 50rpx;
+  padding: 0;
+  margin: 0;
+  margin-top: 15rpx;
+  margin-right: 20rpx;
+  color: #FFF;
+  font-size: 25rpx;
+  letter-spacing: 2rpx;
+  line-height: 50rpx;
+  background-color: #007ACC;
+  border: 1rpx solid rgba(255, 255, 255, 0);
+  border-radius: 25rpx;
+}
+.image-container{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.image{
+  position: relative;
+  height: 100%;
+  width: 31%;
+}
+.image:not(:nth-of-type(3n+3)){
+  margin-right: 10rpx;
+}
+.delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

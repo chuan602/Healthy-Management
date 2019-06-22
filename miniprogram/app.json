@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/record/record"
+  ],
+  "window": {
+    "backgroundColor": "#F1F1F1",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#12b195",
+    "navigationBarTitleText": "健康每一天",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#00ff00",
+    "backgroundColor": "#F3F3F3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/images/tab_icon/home.png",
+        "selectedIconPath": "/images/tab_icon/home-active.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "运动打卡",
+        "iconPath": "/images/tab_icon/message.png",
+        "selectedIconPath": "/images/tab_icon/message-active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

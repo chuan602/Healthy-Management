@@ -1,0 +1,12 @@
+<view class='container'>
+  <view class='textarea-container'>
+    <textarea placeholder='您想记录点什么' placeholder-style='color: #eee' bindinput='onInput' value='{{content}}'></textarea>
+  </view>
+  <view class='image-container'>
+    <image class='image' wx:for="{{imgSrcList}}" wx:key="{{item}}" data-index='{{index}}' mode='aspectFill' bindtap='onPreviewImg' src="{{item}}"><icon class='delete' data-url="{{item}}" bindtap='onDeleteImg' type="clear" size="20"/></image>
+  </view>
+  <view class='utils'>
+    <image class='photo' bindtap='onChooseImage' src='/images/photo.png' mode='aspectFit'></image>
+    <button class='send' bindtap='onSubmitRecord'>发送</button>
+  </view>
+</view>

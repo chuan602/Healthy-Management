@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 用户 openid -->
+  <view class="user-banner">
+    <view class='user-container'>
+      <image src="{{ avatarUrl }}" class='avatar'></image>
+      <text class='user-name' wx:if='{{ logined }}'>{{ username }}</text>
+      <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGetUserInfo" wx:else>登陆</button>
+    </view>
+    <view class='step-count-container'>
+      <text class='step-font'>今天步数：</text>
+      <text class='steps-number'>{{ stepsNum }}</text>
+      <text class='step-advise'>{{ stepAdvise }}</text>
+    </view>
+  </view>
+
+  <view class='my-record'>我的运动记录</view>
+
+  <view class='not-login-warm' wx:if="{{!logined}}">登陆后，才能看到自己的运动记录噢~</view>
+  <view class='not-login-warm' wx:if="{{logined && noRecordFlag}}">没有运动记录，建议多运动噢~</view>
+  <view class='main' wx:else>
+    <view class='record-item' wx:for="{{recordData}}" wx:key="{{item._id}}">
+      <view class='record-content-box'>
+        <text class='record-content'>{{item.content}}</text>
+      </view>
+      <view class='record-image-box'>
+        <image class='record-image-item' mode='aspectFill' wx:for="{{item.imgFileIdList}}" wx:for-item="val" wx:for-index="i" wx:key="{{val}}" src='{{val}}' data-index='{{i}}' data-imglist='{{item.imgFileIdList}}' bindtap='onPreviewImg'></image>
+      </view>
+      <view class='record-utils'>
+        <text class='delete-record' data-id='{{item._id}}' bindtap='onDeleteRecord'>删除</text>
+        <text class='record-time'>{{item.time}}</text>
+      </view>
+    </view>
+  </view>
+</view>
